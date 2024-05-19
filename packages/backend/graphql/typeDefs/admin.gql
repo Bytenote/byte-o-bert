@@ -1,0 +1,18 @@
+type Admin {
+	_id: String!
+	uniqueName: String!
+	name: String!
+	avatar: String
+}
+
+type Query {
+	admins: [Admin] @auth(requires: OWNER)
+}
+
+type Mutation {
+	addAdminsByIds(ids: [String!]!): [Admin] @auth(requires: OWNER) @val
+	addAdminsByGuildRoles(_id: String!, roles: [String!]!): [Admin]
+		@auth(requires: OWNER)
+		@val
+	removeAdmin(_id: String!): Boolean @auth(requires: OWNER)
+}

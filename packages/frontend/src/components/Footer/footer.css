@@ -1,0 +1,26 @@
+.footer {
+	background: var(--bg-2);
+	color: var(--color-2);
+	padding: 5px 20px;
+	font-size: var(--font-size-3);
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+.footer > div.content {
+	text-align: end;
+	padding: 5px 20px;
+}
+
+.footer-link {
+	color: var(--color-2);
+	text-decoration: none;
+}
+
+.footer-link img {
+	height: 16px;
+	width: 16px;
+	margin-right: 5px;
+	margin-bottom: -3px;
+}

@@ -1,0 +1,71 @@
+.nav-user-icon {
+	height: 40px;
+	width: 40px;
+	border-radius: 50%;
+}
+
+.nav-items .MuiButtonBase-root.MuiButton-root {
+	margin: 0 40px;
+}
+
+.nav-menu-icon.MuiSvgIcon-root {
+	width: 18px;
+	height: 18px;
+	padding-right: 5px;
+}
+
+.nav-avatar.MuiAvatar-root.MuiAvatar-circular {
+	height: 60px;
+	width: 60px;
+}
+
+.MuiList-root > .MuiListItem-root {
+	padding: 0;
+}
+
+.MuiAppBar-root .MuiButtonBase-root.MuiButton-root.nav-logo-btn {
+	font-size: var(--font-size-0);
+	font-weight: 900;
+}
+.MuiAppBar-root .MuiButtonBase-root.MuiButton-root,
+.MuiAppBar-root
+	.MuiListItemText-root
+	> .MuiTypography-root.MuiListItemText-primary {
+	background: var(--bg-2);
+	font-weight: 700;
+	transition: color 0.2s ease;
+}
+.MuiAppBar-root .MuiButtonBase-root.MuiButton-root:hover {
+	background: var(--bg-2);
+	opacity: 0.8;
+}
+.MuiAppBar-root .MuiButtonBase-root.MuiButton-root:active,
+.MuiAppBar-root
+	.MuiButtonBase-root.MuiButton-root:active
+	.MuiListItemText-root
+	.MuiTypography-root:active,
+.MuiAppBar-root
+	.MuiButtonBase-root.MuiButton-root:active
+	.MuiListItemText-root
+	.MuiTypography-root {
+	color: var(--color-3);
+}
+.MuiAppBar-root .MuiToolbar-root .MuiAvatar-img:hover {
+	transform: scale(1.03);
+	transition: transform 0.2s ease;
+}
+
+@media screen and (max-width: 900px) {
+	.nav-items .MuiButtonBase-root.MuiButton-root {
+		margin: 0 20px;
+	}
+}
+@media screen and (max-width: 600px) {
+	.nav-items .MuiButtonBase-root.MuiButton-root {
+		margin: 0 10px;
+	}
+	.nav-avatar.MuiAvatar-root.MuiAvatar-circular {
+		height: 50px;
+		width: 50px;
+	}
+}

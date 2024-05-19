@@ -1,0 +1,8 @@
+type UserBotGuilds {
+	mutual: [UserGuild]
+	eligible: [UserGuild]
+}
+
+type Query {
+	userBotGuilds: UserBotGuilds @auth(requires: USER)
+}

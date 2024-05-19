@@ -1,0 +1,108 @@
+.server-data-general {
+	display: flex;
+	align-items: center;
+	padding: 10px 20px;
+}
+.server-general-avatar {
+	margin-right: 40px;
+	height: 128px;
+	aspect-ratio: 1;
+}
+.server-info-container {
+	width: 100%;
+	margin: auto;
+}
+.server-info-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.server-general-info {
+	white-space: nowrap;
+	padding-bottom: 10px;
+}
+.server-data-general .secondary-text {
+	padding-right: 5px;
+	max-height: 30px;
+}
+.server-data-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(135px, 1fr));
+	row-gap: 10px;
+	white-space: nowrap;
+	padding-top: 10px;
+	padding-bottom: 15px;
+}
+.commands-header-right {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+.commands-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+	padding: 0 5px;
+	grid-gap: 20px;
+}
+
+.prefix-input.MuiInputBase-root.MuiInput-root {
+	width: 40px;
+	margin-right: 15px;
+	margin-left: 5px;
+	margin-bottom: 0px;
+	font-size: var(--font-size-0);
+	font-weight: 800;
+}
+.prefix-btn.MuiButtonBase-root.MuiButton-root {
+	font-size: var(--font-size-3);
+	font-weight: 600;
+	padding: 5px 5px;
+	min-width: 50px;
+}
+.prefix-btn.MuiButtonBase-root .MuiSvgIcon-root {
+	font-size: 1.1rem;
+}
+.prefix-btn.MuiButtonBase-root .MuiButton-startIcon {
+	margin: 0px;
+}
+
+.add-command-btn.MuiButtonBase-root.MuiButton-root {
+	margin-right: 20px;
+	margin-left: 5px;
+	margin-bottom: 0px;
+	font-size: var(--font-size-3);
+	font-weight: 800;
+}
+.add-command-btn.MuiButtonBase-root .MuiButton-startIcon {
+	margin-right: 5px;
+}
+.add-command-btn.MuiButtonBase-root .MuiSvgIcon-root {
+	font-size: 1.1rem;
+}
+
+.commands-search-field {
+	width: 180px;
+}
+
+@media screen and (max-width: 600px) {
+	.server-data-general {
+		padding: 10px 0px;
+	}
+	.server-general-avatar {
+		margin-right: 20px;
+	}
+	.server-data-grid {
+		padding-top: 0px;
+	}
+	.commands-grid {
+		grid-gap: 15px;
+	}
+
+	.add-command-btn.MuiButtonBase-root.MuiButton-root {
+		margin-right: 10px;
+	}
+
+	.commands-search-field {
+		width: 120px;
+	}
+}

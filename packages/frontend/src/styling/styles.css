@@ -1,0 +1,331 @@
+@import './vars.css';
+
+/**
+ * Global styles
+ */
+html body {
+	background: var(--bg-1);
+	color: var(--color-1);
+	font-family: var(--font-family);
+	font-size: var(--font-size-1);
+	letter-spacing: var(--letter-spacing-1);
+}
+
+#root {
+	position: relative;
+	min-height: 100vh;
+}
+
+a,
+a:link,
+a:visited,
+a:active {
+	font-family: var(--font-family);
+	color: var(--color-1);
+	text-decoration: none;
+}
+
+.content {
+	margin: auto;
+	color: var(--color-1);
+	font-family: var(--font-family);
+	padding: 25px 20px;
+	height: 100%;
+	width: 80%;
+	max-width: 1400px;
+}
+.content:not(.MuiToolbar-root) {
+	padding-bottom: 50px;
+}
+.content-container {
+	background: var(--bg-2);
+	padding: 10px 20px;
+	margin-bottom: 2vh;
+	border-radius: 7px;
+}
+.content-container-heading {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: var(--font-size-0);
+	font-weight: 600;
+	padding: 10px 0;
+	letter-spacing: 0.9px;
+}
+.content-inner-container {
+	margin-top: 15px;
+	overflow: hidden;
+	scrollbar-width: none;
+}
+
+.flex-align-center {
+	display: flex;
+	align-items: center;
+}
+.flex-justify-center {
+	display: flex;
+	justify-content: center;
+}
+.flex-justify-end {
+	display: flex;
+	justify-content: flex-end;
+}
+.flex-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.primary-text {
+	font-size: var(--font-size-1);
+	font-weight: 600;
+}
+.secondary-text {
+	color: var(--color-2);
+	font-size: var(--font-size-3);
+	letter-spacing: var(--letter-spacing-2);
+	font-weight: 300;
+}
+
+.content-description {
+	padding-right: 30px;
+	width: 70%;
+}
+
+.disabled-content {
+	pointer-events: none;
+	opacity: 0.5;
+}
+
+.ellipsis {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	flex-basis: auto;
+}
+
+::-webkit-scrollbar {
+	background-color: transparent;
+	width: 7px;
+}
+::-webkit-scrollbar-thumb {
+	background-color: var(--bg-4);
+	border-radius: 7px;
+}
+
+/**
+ * Mui overrides
+ */
+/********** AppBar **********/
+.MuiAppBar-root.MuiAppBar-colorPrimary.MuiPaper-root.MuiPaper-elevation {
+	background: var(--bg-2);
+	height: 8vh;
+	min-height: 100px;
+	max-height: 150px;
+}
+
+/********** Button **********/
+.MuiButtonBase-root.MuiButton-root {
+	font-family: var(--family);
+	font-size: 0.9rem;
+	font-weight: 400;
+	letter-spacing: var(--letter-spacing-1);
+}
+.MuiButtonBase-root.MuiButton-root.MuiButton-contained {
+	background: var(--theme-1);
+	color: var(--color-1);
+}
+.MuiButtonBase-root.MuiButton-root.MuiButton-contained:hover {
+	opacity: 0.9;
+}
+.MuiButtonBase-root.MuiButton-root.MuiButton-text {
+	color: var(--color-1);
+}
+
+/********** Card **********/
+.MuiCard-root.MuiPaper-root.MuiPaper-rounded {
+	background: var(--bg-3);
+	color: var(--color-1);
+	height: 100%;
+	width: 100%;
+}
+
+/********** CircularProgress **********/
+.MuiCircularProgress-root.MuiCircularProgress-indeterminate.MuiCircularProgress-colorPrimary {
+	color: var(--theme-1);
+}
+
+/********** Dialog **********/
+.MuiDialog-container .MuiPaper-root.MuiDialog-paper {
+	background: var(--bg-3);
+}
+.MuiDialog-container .MuiPaper-root.MuiDialog-paper .MuiTypography-root {
+	color: var(--color-1);
+	font-family: var(--font-family);
+	font-size: 0.93rem;
+	font-weight: 400;
+}
+.MuiDialog-container .MuiPaper-root.MuiDialog-paper .MuiDialogTitle-root {
+	font-size: 1.15rem;
+	font-weight: 600;
+}
+.MuiDialog-container
+	.MuiPaper-root.MuiDialog-paper
+	.MuiButtonBase-root.MuiButton-root {
+	font-size: 0.7rem;
+}
+
+/********** Divider **********/
+hr.MuiDivider-root.MuiDivider-fullWidth {
+	background: var(--bg-2);
+	margin: 5px 0px;
+}
+
+/********** IconButton **********/
+.MuiButtonBase-root.MuiIconButton-root.MuiIconButton-sizeSmall {
+	color: var(--theme-1);
+}
+
+/********** Input **********/
+.MuiInputBase-root.MuiOutlinedInput-root,
+.MuiInputBase-root.MuiFilledInput-root,
+.MuiInputBase-root.MuiInput-root {
+	border-color: var(--bg-1);
+	color: var(--color-1);
+	font-family: var(--font-family);
+	font-size: var(--font-size-1);
+	font-weight: 600;
+}
+
+/********** List **********/
+.MuiListItemText-root > .MuiTypography-root.MuiListItemText-primary {
+	color: var(--color-1);
+	font-family: var(--font-family);
+	font-size: var(--font-size-1);
+	font-weight: 400;
+	letter-spacing: var(--letter-spacing-1);
+}
+.MuiListItemText-root > .MuiTypography-root.MuiListItemText-secondary {
+	color: var(--color-2);
+	font-family: var(--font-family);
+	font-size: var(--font-size-2);
+	letter-spacing: var(--letter-spacing-2);
+}
+
+/********** Menu **********/
+.MuiPaper-root.MuiPaper-elevation > .MuiList-root.MuiMenu-list {
+	font-size: var(--font-size-3);
+}
+.MuiMenuItem-root.MuiMenuItem-gutters {
+	font-family: var(--font-family);
+	font-size: var(--font-size-2);
+	font-weight: 400;
+}
+
+/********** Paper **********/
+.MuiPaper-root.MuiPaper-elevation:not(.MuiAlert-root) {
+	background: var(--bg-4);
+	color: var(--color-1);
+	font-family: var(--font-family);
+}
+
+/********** Snackbar **********/
+.MuiAlert-root.MuiAlert-filledInfo {
+	background: var(--theme-1);
+}
+
+/********** Switch **********/
+span.MuiSwitch-root.MuiSwitch-sizeSmall > span.MuiSwitch-track {
+	background: #808080;
+}
+.MuiButtonBase-root.MuiSwitch-switchBase.Mui-checked .MuiSwitch-thumb {
+	background: var(--theme-1);
+}
+span.MuiSwitch-root.MuiSwitch-sizeSmall > .Mui-checked + .MuiSwitch-track {
+	background: var(--theme-2);
+	opacity: 1;
+}
+
+/********** TextField **********/
+.MuiFormLabel-root.MuiInputLabel-root {
+	color: var(--color-2);
+	font-family: var(--font-family);
+	font-size: var(--font-size-2);
+	font-weight: 400;
+}
+.MuiFormLabel-root.MuiInputLabel-root.Mui-focused {
+	color: var(--theme-1);
+	font-size: var(--font-size-0);
+	font-weight: 700;
+}
+.MuiInputBase-root.MuiInput-root.MuiInput-underline:before {
+	border-color: var(--color-2);
+}
+.MuiInputBase-root.MuiInput-root.MuiInput-underline:hover:not(
+		.Mui-disabled,
+		.Mui-error
+	):before {
+	border-color: var(--color-1);
+}
+.MuiInputBase-root.MuiInput-root.MuiInput-underline:after {
+	border-color: var(--theme-1);
+}
+
+/********** Toolbar **********/
+.MuiToolbar-root.MuiToolbar-regular {
+	margin: auto;
+	align-items: center;
+	justify-content: space-between;
+}
+
+/**
+ * Media queries
+ */
+@media screen and (max-width: 1200px) {
+	.content {
+		width: 90%;
+	}
+}
+@media screen and (max-width: 900px) {
+	.content {
+		width: 95%;
+	}
+	.content-inner-container {
+		padding-top: 5px;
+	}
+
+	/********** AppBar **********/
+	.MuiAppBar-root.MuiAppBar-colorPrimary.MuiPaper-root.MuiPaper-elevation {
+		min-height: 90px;
+		max-height: 100px;
+	}
+	/********** Toolbar **********/
+	.MuiToolbar-root.MuiToolbar-regular {
+		width: 100%;
+	}
+}
+@media screen and (max-width: 600px) {
+	.content {
+		width: 100%;
+		padding: 25px 10px;
+	}
+	.content-container {
+		padding: 5px 10px;
+	}
+	.hide-600 {
+		display: none;
+	}
+	.content-description {
+		padding-right: 0px;
+		width: 50%;
+	}
+
+	/********** AppBar **********/
+	.MuiAppBar-root.MuiAppBar-colorPrimary.MuiPaper-root.MuiPaper-elevation {
+		min-height: 80px;
+	}
+}
+@media screen and (max-width: 500px) {
+	.hide-500 {
+		display: none;
+	}
+}

@@ -1,0 +1,31 @@
+.server-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+	column-gap: 15px;
+	grid-auto-rows: 1fr;
+	overflow: hidden;
+	scrollbar-width: none;
+	padding: 0px 20px;
+}
+.server-grid > .virtuoso-grid-item {
+	padding: 10px 0;
+}
+
+.dashboard-loading {
+	height: 50vh;
+}
+
+a.dashboard-repo-link {
+	color: var(--theme-1);
+	font-size: var(--font-size-1);
+	font-weight: 800;
+	padding-left: 0.3rem;
+	text-decoration: underline;
+}
+
+@media screen and (max-width: 900px) {
+	.server-grid {
+		padding: 0 10px;
+		column-gap: 10px;
+	}
+}

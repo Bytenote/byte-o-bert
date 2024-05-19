@@ -1,0 +1,61 @@
+type Guild {
+	_id: String!
+	commands: [GuildCommand]!
+	icon: String
+	name: String!
+	members: Int!
+	prefix: String!
+	roles: Int!
+	tChannels: Int!
+	vChannels: Int!
+}
+
+type GeneralGuild {
+	_id: String!
+	icon: String
+	name: String!
+	members: Int!
+	prefix: String!
+	roles: Int!
+	tChannels: Int!
+	vChannels: Int!
+}
+
+type GuildCommand {
+	guildId: String!
+	name: String!
+	action: String!
+	author: String!
+	active: Boolean!
+	updatedBy: String
+	createdAt: String!
+	updatedAt: String
+}
+
+type Query {
+	guild(_id: String!): Guild @auth(requires: GUILD_ADMIN)
+	guildGeneral(_id: String!): GeneralGuild @auth(requires: GUILD_ADMIN)
+	guildCommands(_id: String!): [GuildCommand]! @auth(requires: GUILD_ADMIN)
+	guildCommand(_id: String!, name: String!): GuildCommand
+		@auth(requires: GUILD_ADMIN)
+}
+
+type Mutation {
+	createCommand(_id: String!, name: String!, action: String!): GuildCommand
+		@auth(requires: GUILD_ADMIN)
+		@val
+	updateCommand(_id: String!, name: String!, action: String!): GuildCommand
+		@auth(requires: GUILD_ADMIN)
+		@val
+	updateCommandActive(
+		_id: String!
+		name: String!
+		active: Boolean!
+	): GuildCommand @auth(requires: GUILD_ADMIN)
+	deleteCommand(_id: String!, name: String!): Boolean
+		@auth(requires: GUILD_ADMIN)
+		@val
+	updatePrefix(_id: String!, prefix: String!): String
+		@auth(requires: GUILD_ADMIN)
+		@val
+}

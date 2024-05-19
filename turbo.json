@@ -1,0 +1,17 @@
+{
+	"$schema": "https://turbo.build/schema.json",
+	"globalDependencies": ["config/**"],
+	"globalDotEnv": [".env.production", ".env.development", ".env"],
+	"pipeline": {
+		"build": {},
+		"commands:deploy": {},
+		"commands:devDeploy": {},
+		"dev": {
+			"cache": false,
+			"persistent": true
+		},
+		"start": {
+			"dependsOn": ["build"]
+		}
+	}
+}

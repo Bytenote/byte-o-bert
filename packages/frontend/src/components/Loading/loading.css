@@ -1,0 +1,8 @@
+.component-loading-div {
+	height: 100%;
+}
+
+.loading-content {
+	font-size: var(--font-size-1);
+	font-weight: 400;
+}

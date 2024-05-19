@@ -1,0 +1,11 @@
+type Settings {
+	isPrivate: Boolean!
+}
+
+type Query {
+	settings: Settings @auth(requires: USER)
+}
+
+type Mutation {
+	updateIsPrivate(isPrivate: Boolean!): Settings @auth(requires: OWNER)
+}

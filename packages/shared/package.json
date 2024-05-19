@@ -1,0 +1,25 @@
+{
+	"name": "@byte-o-bert/shared",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"type": "module",
+	"exports": {
+		"./services/auth": "./services/auth.service.js",
+		"./services/guild": "./services/guild.service.js",
+		"./services/log": "./services/log.service.js",
+		"./services/user": "./services/user.service.js",
+		"./services/validation": "./services/validation.service.js",
+		"./utils/constants": "./utils/constants.js",
+		"./utils/helpers": "./utils/helpers.js",
+		"./utils/utils": "./utils/utils.js"
+	},
+	"scripts": {},
+	"keywords": [],
+	"author": "",
+	"license": "MIT",
+	"dependencies": {
+		"discord.js": "^14.15.2",
+		"winston": "^3.13.0"
+	}
+}

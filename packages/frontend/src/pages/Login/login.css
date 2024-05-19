@@ -1,0 +1,149 @@
+.content:has(> .lp) {
+	display: flex;
+	align-items: center;
+	min-height: 100vh;
+}
+
+.lp {
+	letter-spacing: var(--letter-spacing-2);
+}
+.lp-wrapper {
+	flex-flow: column wrap;
+	padding: 10px;
+	line-height: 1.2;
+}
+.lp-small {
+	color: var(--color-1);
+	font-size: 1rem;
+	padding-top: 10px;
+}
+.lp-medium {
+	font-size: 1.5rem;
+	font-weight: 500;
+}
+.lp-large {
+	font-size: 3rem;
+	font-weight: 700;
+}
+.lp-login {
+	flex-flow: column wrap;
+	padding-top: 25px;
+}
+.lp-login-text {
+	padding: 5px 0;
+}
+.lp-reviews > * {
+	margin: 20px 0;
+}
+
+.MuiAvatar-root.lp-avatar {
+	height: 8rem;
+	width: 8rem;
+	transition: transform 0.2s ease;
+	margin-right: 20px;
+}
+.MuiAvatar-root.lp-avatar:hover {
+	transform: scale(1.04);
+}
+.MuiButtonBase-root.MuiButton-root.lp-login-btn {
+	margin-top: 5px;
+}
+hr.MuiDivider-root.MuiDivider-fullWidth.lp-divider {
+	display: flex;
+	margin: -230px 0px;
+	width: 2px;
+}
+.MuiCard-root.MuiPaper-root.MuiPaper-rounded.lp-review {
+	padding: 5px 20px;
+	transition: all 0.3s ease;
+}
+.MuiCard-root.MuiPaper-root.MuiPaper-rounded.lp-review:hover {
+	opacity: 0.9;
+	transform: scale(1.007);
+}
+.MuiListItemText-root.lp-review-text
+	> .MuiTypography-root.MuiListItemText-primary,
+.MuiListItemText-root.lp-review-text
+	> .MuiTypography-root.MuiListItemText-secondary {
+	letter-spacing: 0.95px;
+	line-height: 1.2;
+}
+.MuiListItemText-root.lp-review-text
+	> .MuiTypography-root.MuiListItemText-secondary {
+	padding: 5px 0;
+	padding-bottom: 15px;
+	float: right;
+}
+
+@media screen and (max-width: 1300px) {
+	.lp-wrapper {
+		padding: 10px 0;
+	}
+	.content {
+		width: 90%;
+	}
+}
+@media screen and (max-width: 1000px) {
+	.content {
+		width: 95%;
+	}
+}
+@media screen and (max-width: 899px) {
+	.lp-login {
+		padding-bottom: 30px;
+	}
+	.lp-reviews {
+		width: 70%;
+	}
+
+	hr.MuiDivider-root.MuiDivider-fullWidth.lp-divider {
+		display: none;
+	}
+}
+@media screen and (max-width: 600px) {
+	.lp-left {
+		flex-flow: column wrap;
+	}
+	.lp-small {
+		font-size: var(--font-size-1);
+		padding-top: 10px;
+	}
+	.lp-medium {
+		font-size: var(--font-size-0);
+	}
+	.lp-large {
+		font-size: 1.5rem;
+	}
+	.lp-login {
+		padding-top: 10px;
+		padding-bottom: 20px;
+	}
+	.lp-reviews {
+		width: 80%;
+	}
+	.lp-reviews > * {
+		margin: 10px 0;
+	}
+
+	.MuiAvatar-root.lp-avatar {
+		height: 6rem;
+		width: 6rem;
+		margin-right: 10px;
+	}
+	.MuiCard-root.MuiPaper-root.MuiPaper-rounded.lp-review {
+		padding: 3px;
+	}
+}
+@media screen and (max-width: 450px) {
+	.lp-login {
+		padding-top: 0px;
+		padding-bottom: 0px;
+	}
+	.lp-reviews {
+		width: 95%;
+	}
+
+	.lp .MuiGrid-root.MuiGrid-item {
+		padding: 5px 10px;
+	}
+}

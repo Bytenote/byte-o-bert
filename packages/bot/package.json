@@ -1,0 +1,19 @@
+{
+	"name": "@byte-o-bert/bot",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"type": "module",
+	"scripts": {
+		"dev": "nodemon index.js",
+		"start": "node index.js",
+		"commands:deploy": "node index.js deploy",
+		"commands:devDeploy": "node index.js dev-deploy"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "MIT",
+	"dependencies": {
+		"discord.js": "^14.15.2"
+	}
+}
