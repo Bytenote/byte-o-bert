@@ -19,20 +19,6 @@ export const getDirnameEnv = (file) => {
 };
 
 /**
- * Returns the relative path of the specified file
- * from the current working directory.
- *
- * @param {string} file - File URL
- * @returns {string}
- */
-export const getRelativePath = (file) => {
-	const cwd = process.cwd();
-	const absolutePath = fileURLToPath(file);
-
-	return path.relative(cwd, absolutePath);
-};
-
-/**
  * Iterates over all files in a directory and returns
  * an array of promises that resolve to the imported files.
  * For dynamically importing files.

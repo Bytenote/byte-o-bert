@@ -1,5 +1,5 @@
 import axios from 'axios';
-import log from '@byte-o-bert/shared/services/log';
+import log from '@byte-o-bert/logger';
 import { DISCORD_API_BASE_URL } from '../utils/constants.js';
 
 const logMeta = { origin: import.meta.url };

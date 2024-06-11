@@ -1,19 +1,18 @@
 {
-	"name": "@byte-o-bert/database",
+	"name": "@byte-o-bert/logger",
 	"version": "1.0.0",
 	"description": "",
 	"main": "index.js",
 	"type": "module",
 	"exports": {
-		".": "./index.js",
-		"./models": "./models/index.js"
+		".": "./index.js"
 	},
 	"scripts": {},
 	"keywords": [],
 	"author": "",
 	"license": "MIT",
 	"dependencies": {
-		"@byte-o-bert/logger": "workspace:*",
-		"mongoose": "^8.3.3"
+		"@byte-o-bert/config": "workspace:*",
+		"winston": "^3.13.0"
 	}
 }

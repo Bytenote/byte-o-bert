@@ -47,7 +47,8 @@ It is recommended, but not necessary, to [install PM2 globally](https://pm2.keym
 ### Prerequisites
 
 -   [Discord Application](https://discord.com/developers/applications)
--   [NodeJS (preferably via nvm)](https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating)
+-   [NodeJS v20+ (preferably via nvm)](https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating)
+-   [pnpm](https://pnpm.io/installation)
 -   [MongoDB local](https://www.mongodb.com/docs/v6.0/administration/install-community/) or [free Atlas Cloud DB](https://www.mongodb.com/free-cloud-database)
 
 ### Installation
@@ -58,7 +59,7 @@ It is recommended, but not necessary, to [install PM2 globally](https://pm2.keym
     ```
 2. Install dependencies
     ```sh
-    npm install
+    pnpm install
     ```
 3. Create .env file(s) (see [.env Config](https://github.com/bytenote/byte-o-bert?tab=readme-ov-file#env-config))
 4. Set up the database, either [locally](https://www.mongodb.com/docs/v6.0/administration/install-community/) or [in the cloud](https://www.mongodb.com/free-cloud-database)
@@ -136,20 +137,20 @@ Once there, the first thing to do is to deploy all Slash Commands, so they can b
 This is only necessary once, or whenever you add/update/remove a Slash Command.
 
 ```sh
-npm run commands:deploy
+pnpm commands:deploy
 ```
 
 After that you can start the bot with the following command, which will spawn a new PM2 process.
 
 ```sh
-npm run pm2:bot
+pnpm pm2:bot
 ```
 
 To also manage server settings and chat commands over the web, you need to start the backend.  
 The frontend will be build on the first start, which takes a few seconds. Successive starts will be available immediately thanks to the build process being cached.
 
 ```sh
-npm run pm2:backend
+pnpm pm2:backend
 ```
 
 If you have not installed PM2 globally, you'll always need to navigate into the project's directory in order to run PM2 commands.  
@@ -181,16 +182,16 @@ To start developing, you can use one of the following commands:
 
 ```sh
 # start bot, front- & backend
-npm run dev
+pnpm dev
 
 # start bot only
-npm run dev:bot
+pnpm dev:bot
 
 # start backend only
-npm run dev:backend
+pnpm dev:backend
 
 # start frontend only
-npm run dev:frontend
+pnpm dev:frontend
 ```
 
 # License

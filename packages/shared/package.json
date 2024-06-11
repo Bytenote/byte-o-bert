@@ -7,7 +7,6 @@
 	"exports": {
 		"./services/auth": "./services/auth.service.js",
 		"./services/guild": "./services/guild.service.js",
-		"./services/log": "./services/log.service.js",
 		"./services/user": "./services/user.service.js",
 		"./services/validation": "./services/validation.service.js",
 		"./utils/constants": "./utils/constants.js",
@@ -19,7 +18,9 @@
 	"author": "",
 	"license": "MIT",
 	"dependencies": {
-		"discord.js": "^14.15.2",
-		"winston": "^3.13.0"
+		"@byte-o-bert/database": "workspace:*",
+		"@byte-o-bert/logger": "workspace:*",
+		"axios": "^1.6.8",
+		"discord.js": "^14.15.2"
 	}
 }
