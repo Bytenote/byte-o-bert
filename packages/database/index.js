@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-import log from '@byte-o-bert/shared/services/log';
+import log from '@byte-o-bert/logger';
 
 const logMeta = { origin: import.meta.url };
 let db = null;
