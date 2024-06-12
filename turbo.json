@@ -1,8 +1,12 @@
 {
 	"$schema": "https://turbo.build/schema.json",
-	"globalDependencies": ["config/**"],
-	"globalDotEnv": [".env.production", ".env.development", ".env"],
-	"pipeline": {
+	"globalDependencies": [
+		"config/**",
+		".env.production",
+		".env.development",
+		".env"
+	],
+	"tasks": {
 		"build": {},
 		"commands:deploy": {},
 		"commands:devDeploy": {},

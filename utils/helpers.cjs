@@ -11,12 +11,10 @@ const os = require('os');
  * @returns {string}
  */
 exports.getNpmPath = () => {
-	// get npm path if nvm is used
 	const nvmPath = process.env.NVM_BIN
 		? path.join(process.env.NVM_BIN, 'npm')
 		: null;
 
-	// get os based npm path
 	let osNpmPath;
 	if (os.platform() === 'win32') {
 		osNpmPath = path.join(

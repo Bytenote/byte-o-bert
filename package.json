@@ -5,17 +5,17 @@
 	"main": "index.js",
 	"type": "module",
 	"scripts": {
-		"dev": "dotenv -e .env -e .env.development -- turbo dev",
-		"dev:bot": "dotenv -e .env -e .env.development -- turbo dev --filter=bot",
-		"dev:backend": "dotenv -e .env -e .env.development -- turbo dev --filter=backend",
-		"dev:frontend": "dotenv -e .env -e .env.development -- turbo dev --filter=frontend",
-		"prod": "dotenv -e .env -e .env.production -- turbo start",
-		"prod:bot": "dotenv -e .env -e .env.production -- turbo start --filter=bot",
-		"prod:backend": "dotenv -e .env -e .env.production -- turbo start --filter=frontend --filter=backend",
+		"dev": "dotenv -e .env -e .env.development -- turbo dev --env-mode=loose",
+		"dev:bot": "dotenv -e .env -e .env.development -- turbo dev --filter=./apps/bot --env-mode=loose",
+		"dev:backend": "dotenv -e .env -e .env.development -- turbo dev --filter=./apps/backend --env-mode=loose",
+		"dev:frontend": "dotenv -e .env -e .env.development -- turbo dev --filter=./apps/frontend --env-mode=loose",
+		"prod": "dotenv -e .env -e .env.production -- turbo start --env-mode=loose",
+		"prod:bot": "dotenv -e .env -e .env.production -- turbo start --filter=./apps/bot --env-mode=loose",
+		"prod:backend": "dotenv -e .env -e .env.production -- turbo start --filter=./apps/frontend --filter=./apps/backend --env-mode=loose",
 		"pm2:bot": "dotenv -e .env -e .env.production -- pm2 start ecosystem.bot.config.cjs",
 		"pm2:backend": "dotenv -e .env -e .env.production -- pm2 start ecosystem.backend.config.cjs",
-		"commands:deploy": "dotenv -e .env -e .env.production -- turbo commands:deploy --filter=bot",
-		"commands:devDeploy": "dotenv -e .env -e .env.development -- turbo commands:devDeploy --filter=bot"
+		"commands:deploy": "dotenv -e .env -e .env.production -- turbo commands:deploy --filter=./apps/bot --env-mode=loose",
+		"commands:devDeploy": "dotenv -e .env -e .env.development -- turbo commands:devDeploy --filter=./apps/bot --env-mode=loose"
 	},
 	"keywords": [],
 	"author": "",
@@ -32,7 +32,7 @@
 	"devDependencies": {
 		"nodemon": "^3.1.3"
 	},
-	"packageManager": "pnpm@8.15.6",
+	"packageManager": "pnpm@9.3.0",
 	"engines": {
 		"node": ">=20"
 	}
